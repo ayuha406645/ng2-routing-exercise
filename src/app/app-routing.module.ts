@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, Route, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { SecondComponent } from './second/second.component';
 
+const fullbackRoute: Route = {
+  path: '**', component: HomeComponent
+};
+
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'second', component: SecondComponent },
-  { path: '**', component: HomeComponent }
+  fullbackRoute
 ];
 
 @NgModule({
