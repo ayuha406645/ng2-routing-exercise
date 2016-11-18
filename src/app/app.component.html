@@ -3,7 +3,14 @@
 </h1>
 
 <ul>
-  <li><a [routerLink]="['/home']">Home</a></li>
+  <li>
+    <a [routerLink]="['/home']">Home</a>
+    <ul>
+      <li><a [routerLink]="['home/home1']">Home1</a></li>
+      <li><a [routerLink]="['home/home2']">Home2</a></li>
+      <li><a [routerLink]="['home/1']">Home-Detail</a></li>
+    </ul>
+  </li>
   <li><a [routerLink]="['/second']">second</a></li>
 </ul>
 
